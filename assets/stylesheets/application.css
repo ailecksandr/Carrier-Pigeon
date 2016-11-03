@@ -1,0 +1,62 @@
+@import 'bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.header {
+    padding: 5px;
+}
+
+.header img {
+    max-height: 64px;
+}
+
+.header h1 {
+    vertical-align: middle;
+    font-family: 'Coiny', cursive;
+}
+
+.inline {
+    display: inline;
+}
+
+.jumbotron {
+    width: 640px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.jumbotron h1 {
+    font-size: 2.5em;
+    text-align: justify;
+}
+
+.jumbotron .actions {
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.jumbotron .read {
+    float: left;
+}
+
+.jumbotron .send {
+    float: right;
+}
+
+.jumbotron a {
+    width: 120px;
+}
+
+.footer .container {
+    display: inline;
+}
+
+.footer p {
+    text-align: right !important;
+    vertical-align: middle;
+    margin: 0 100px 0 0;
+    font-family: 'Coiny', cursive;
+}

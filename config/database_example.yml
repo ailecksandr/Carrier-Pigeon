@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: login
+  password: password
+  host: localhost
+
+development:
+  <<: *default
+  database: CarrierPigeon_dev
+
+test:
+  <<: *default
+  database: CarrierPigeon_test
+
+production:
+  <<: *default
+  database: CarrierPigeon_prod
