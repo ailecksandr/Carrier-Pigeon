@@ -4,7 +4,7 @@ class CarrierPigeon < Sinatra::Application
   end
 
   not_found do
-    haml :'layout/404'
+    haml :'layout/404', layout: false
   end
 end
 

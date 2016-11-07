@@ -1,4 +1,27 @@
-.jumbotron.not-found
-  %h1 Sorry.
-  %h2 404
-  %h3 Page came to the horizon
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', content: 'text/html; charset=utf-8'}
+    %meta{content: "4;url=/", 'http-equiv' => 'refresh'}
+    %title= title('Page not found')
+    = set_favicon 'favicon'
+    = include_stylesheet 'application'
+  %body
+    .navbar.navbar-default.header
+      .container
+        = link_to '/' do
+          = image '/images/favicon.png'
+          %h1.inline Carrier Piggeon
+          %i{class: 'fa fa-icon fa-twitter'}
+
+    .container.content
+      .jumbotron.not-found
+        %h1 Sorry.
+        %h2 404
+        %h3 Page came to the horizon
+
+    .navbar.navbar-default.navbar-fixed-bottom.row-fluid.footer
+      .navbar-inner
+        .container
+          %p Alex Orlov &copy; 2016
+
+

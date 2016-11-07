@@ -1,3 +1,4 @@
+require 'sinatra/form_helpers'
 require_relative '../../lib/form_tags_helper'
 
 module ApplicationHelper
@@ -44,6 +45,6 @@ module ApplicationHelper
   end
 
   def humanize_date(date)
-    date.strftime("%d %B, at %H:%M")
+    date.strftime("%d %B at %H:%M")
   end
 end

@@ -13,14 +13,13 @@ gem 'sidekiq'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec'
-  gem 'faker'
-  gem 'factory_girl'
-  gem 'shoulda-matchers', require: false
-  gem 'timecop'
 end
 
 group :test do
   gem 'database_cleaner'
   gem 'simplecov'
+  gem 'factory_girl'
+  gem 'shoulda-matchers'
+  gem 'rspec'
+  gem 'faker'
 end

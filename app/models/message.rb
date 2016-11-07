@@ -19,13 +19,13 @@ class Message < ActiveRecord::Base
   end
 
   def update_state!
-    attributes = self.attributes.map{ |key, value| [key.to_sym, value] }.to_h
+    message = Message.new(self.attributes)
     if self.reviewing?
       self.destroy_value -= 1
-      attributes[:destroy_value] = self.destroy_value
+      message.destroy_value = self.destroy_value
       self.destroy_value.zero? ? self.destroy : self.save
     end
-    attributes
+    message
   end
 
 

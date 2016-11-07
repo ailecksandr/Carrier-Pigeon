@@ -1,5 +1,3 @@
-require 'sinatra/form_helpers'
-
 module FormTagsHelper
   def include_stylesheet(name, options = {})
     href = options[:external] ? name : "/stylesheets/#{name}.css"

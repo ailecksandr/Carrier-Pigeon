@@ -9,6 +9,7 @@ require 'sinatra/flash'
 require_relative 'config/environment'
 require_relative 'app/helpers/application_helper'
 require_relative 'config/initializers/strong_params'
+require_relative 'config/initializers/sidekiq'
 
 class CarrierPigeon < Sinatra::Application
 	register Sinatra::ActiveRecordExtension, Sinatra::Flash

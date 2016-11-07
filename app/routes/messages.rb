@@ -27,12 +27,12 @@ class CarrierPigeon < Sinatra::Application
   post '/message/:token' do
     @message = Message.find_by_token(params[:token])
 
-    if @message.with_password?(params[:message][:password])
-      @message_attributes = @message.update_state!
+    if @message && @message.with_password?(params[:message][:password])
+      @message = @message.update_state!
       haml :'messages/show'
     else
       flash[:error] = 'Wrong password.'
-      redirect :"message/#{@message.token}"
+      redirect :"message/#{params[:token]}"
     end
   end
 

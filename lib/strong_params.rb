@@ -4,8 +4,8 @@ module StrongParams
   end
 
   def permit(*keys)
-    result = self.clone
-    keys_hash = keys.map{ |key| [key.to_s, false] }.to_h
+    result = self.map{ |key, value| [key.to_sym, value] }.to_h
+    keys_hash = keys.map{ |key| [key.to_sym, false] }.to_h
 
     result.keys.each do |key|
       keys_hash.has_key?(key) ? (keys_hash[key] = true) : result.delete(key)

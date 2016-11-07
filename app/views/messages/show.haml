@@ -7,13 +7,13 @@
 
 .panel.panel-default.message-panel
   .panel-heading
-    %h2 Message:
+    %h2 Message
   .panel-body
-    = hidden :message, :encrypted_body, value: @message_attributes[:body]
+    = hidden :message, :encrypted_body, value: @message.body
     = hidden :message, :password, value: params[:message][:password]
     = textarea :message, :body, '', class: 'form-control', readonly: true, rows: 7
   .panel-footer
-    - if @message_attributes[:destroy_type] == 'reviewing'
-      = reviews_info(@message_attributes[:destroy_value])
+    - if @message.reviewing?
+      = reviews_info(@message.destroy_value)
     - else
-      = expiring_info(@message_attributes[:created_at], @message_attributes[:destroy_value])
+      = expiring_info(@message.created_at, @message.destroy_value)
