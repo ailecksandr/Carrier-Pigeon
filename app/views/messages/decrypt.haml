@@ -1,0 +1,24 @@
+- content_for :title do
+  = title('Decrypting message')
+- content_for :styles do
+  = include_stylesheet 'plugins/jquery.bootstrap-touchspin'
+- content_for :scripts do
+  = include_javascript 'plugins/jquery.bootstrap-touchspin'
+  = include_javascript 'fields'
+  = include_javascript 'forms'
+
+.panel.panel-default.form-panel.decrypt-form
+  .panel-heading
+    %h2 Decrypting message
+
+  = form_tag "/message/#{@message.token}", method: :post, autocomplete: 'off', class: 'decrypt-message' do
+    .panel-body
+      .password
+        = label :message, :password, 'Enter password', class: 'form-label'
+        = password :message, :password, class: 'form-control'
+        .toggle
+          .checkbox-container
+            = checkbox :message, :show_password, 'Show password'
+
+    .panel-footer.actions
+      = submit 'Decrypt', class: 'btn btn-info right button'

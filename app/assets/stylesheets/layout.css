@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    background-image: url(../images/background.png);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+form {
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea:focus, input:focus {
+    border-color: rgba(6, 6, 6, 0.17) !important;
+}
+
+textarea:focus {
+    box-shadow: 0 0 4px 0 rgba(6, 6, 6, 0.17) !important;
+}
+
+input:focus {
+    border-color: rgba(6, 6, 6, 0.17) !important;
+    box-shadow: 0 0 2px 0 rgba(6, 6, 6, 0.17) !important;
+}
+
+.inline {
+    display: inline;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.header {
+    padding: 5px;
+}
+
+.content {
+    margin-bottom: 60px;
+}
+
+.actions {
+    overflow: hidden;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.destroy-type-group {
+    margin: 0 0 15px 0;
+}
+
+.params-group {
+    margin: 15px 15px
+}
+
+.destroy-type-group label {
+    margin: 0;
+}
+
+.destroy-type-group hr {
+    margin: 5px;
+}
+
+.radios {
+    padding: 15px 100px;
+    margin: 0;
+}
+
+.radios * {
+    cursor: pointer;
+}
+
+.button {
+    width: 120px;
+}
+
+.header img {
+    max-height: 64px;
+}
+
+.header h1 {
+    vertical-align: middle;
+    font-family: 'Coiny', cursive;
+    color: #333;
+}
+
+.jumbotron, .panel {
+    width: 640px;
+    margin: 20px auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.jumbotron {
+    padding: 20px;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+}
+
+.jumbotron h1 {
+    font-size: 2.4em;
+    text-align: justify;
+}
+
+.jumbotron .actions {
+    margin: 60px 40px 20px 40px;
+}
+
+.footer .container {
+    display: inline;
+}
+
+.footer p {
+    text-align: right !important;
+    vertical-align: middle;
+    margin: 0 100px 0 0;
+    font-family: 'Coiny', cursive;
+}
+
+.panel h2 {
+    margin: 10px 0;
+}
+
+.radios input {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form-panel .selected {
+    color: #656;
+}
+
+.radios input, .radios label:last-child {
+    float: right;
+}
+
+.radios input:first-child, .radios label:first-child {
+    float: left;
+}
+
+.form-panel label, .message-panel .panel-footer {
+    font-weight: 100;
+    color: #999;
+}
+
+.form-label {
+    margin-left: 20px;
+}
+
+.password .toggle {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.toggle .checkbox-container {
+    display: inline-block;
+    text-align: left;
+}
+
+.checkbox-container input[type=checkbox] {
+    margin-right: 7px;
+}
+
+.not-found {
+    padding: 50px;
+}
+
+.not-found *{
+    text-align: center !important;
+    margin: 15px;
+}
+
+.not-found h2 {
+    font-family: 'Coiny', cursive;
+    text-align: center !important;
+    font-size: 7.5em;
+    margin-top: 0;
+}
+
+.not-found h1 {
+    font-size: 4.5em;
+    margin-bottom: 0;
+}
+
+.token-panel {
+    width: 480px;
+}
+
+.token-panel .panel-body {
+    padding: 40px 25px;
+}
+
+.token-panel .panel-body input{
+    text-align: center;
+    cursor: text;
+}
+
+.message-panel .panel-body {
+    padding: 20px 25px;
+}
+
+.message-panel .panel-footer {
+    text-align: right;
+}

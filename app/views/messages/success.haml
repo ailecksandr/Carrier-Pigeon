@@ -1,0 +1,8 @@
+- content_for :title do
+  = title('Your token')
+
+.panel.panel-default.token-panel
+  .panel-heading
+    %h2 Token of your message:
+  .panel-body
+    = input :message, :token, value: @message.token, class: 'form-control', readonly: true

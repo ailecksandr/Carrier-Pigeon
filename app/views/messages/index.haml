@@ -1,0 +1,9 @@
+- content_for :title do
+  = title
+
+.jumbotron
+  %h1 Send messages to your friend secure
+  %h4 Try our service for secure delivery of your messages.
+  .actions
+    = link 'Read', '/messages/search', class: 'btn btn-info right button'
+    = link 'Send', '/messages/new', class: 'btn btn-info left button'

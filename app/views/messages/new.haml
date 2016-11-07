@@ -1,0 +1,34 @@
+- content_for :title do
+  = title('Creating message')
+- content_for :scripts do
+  = include_javascript 'plugins/aes'
+  = include_javascript 'fields'
+  = include_javascript 'message_form'
+
+.panel.panel-default.form-panel
+  .panel-heading
+    %h2 Creating encrypted message
+
+  = form_tag '/messages/encrypt', method: :post, autocomplete: 'off', class: 'new-message' do
+    .panel-body
+      = label :message, :entered_body, 'Message text', class: 'form-label'
+      = textarea :message, :entered_body, '', class: 'form-control', rows: 7
+      = hidden :message, :body
+      .params-group
+        .destroy-type-group
+          .text-center
+            = label :message, :destroy_type, 'Select type of destroying message'
+            %hr
+          .radios
+            = radio_button :message, :destroy_type, options_for_radio_buttons, selected: :reviewing
+          = input :message, :destroy_value, class: 'form-control numeric'
+        .password
+          = label :message, :password, 'Enter password', class: 'form-label'
+          = password :message, :password, class: 'form-control'
+          .toggle
+            .checkbox-container
+              = checkbox :message, :show_password, 'Show password'
+
+    .panel-footer.actions
+      = submit 'Send', class: 'btn btn-info right button'
+

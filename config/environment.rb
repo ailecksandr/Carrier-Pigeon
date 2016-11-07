@@ -1,6 +1,8 @@
+require 'sinatra/reloader'
+
 configure :development do
-  set :database, 'database.yml'
   set :show_exceptions, true
+  register Sinatra::Reloader
 end
 
 configure :production do
@@ -14,4 +16,18 @@ configure :production do
       :db => db.path[1..-1],
       :encoding => 'utf8'
   )
+
+  Sidekiq.configure_server do |config|
+    config.redis = {
+        url: 'redis://localhost:6379',
+        namespace: 'my_app_name_production'
+    }
+  end
+
+  Sidekiq.configure_client do |config|
+    config.redis = {
+        url: 'redis://localhost:6379',
+        namespace: 'my_app_name_production'
+    }
+  end
 end

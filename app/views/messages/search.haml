@@ -1,0 +1,16 @@
+- content_for :title do
+  = title('Searching message')
+- content_for :scripts do
+  = include_javascript 'fields'
+  = include_javascript 'forms'
+
+.panel.panel-default.form-panel.search-form
+  .panel-heading
+    %h2 Searching encrypted message
+
+  .panel-body
+    .token
+      = label :message, :token, 'Enter token', class: 'form-label'
+      = input :message, :token, class: 'form-control', autocomplete: 'off'
+  .panel-footer.actions
+    = link_to 'Find', '/message', class: 'btn btn-info right button'
