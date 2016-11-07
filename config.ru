@@ -1,3 +1,2 @@
-root = File.dirname(__FILE__)
-require File.join(root, 'app')
+require_relative 'app'
 run CarrierPigeon.new

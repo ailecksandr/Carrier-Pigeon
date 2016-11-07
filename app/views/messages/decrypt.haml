@@ -9,6 +9,8 @@
 
 .panel.panel-default.form-panel.decrypt-form
   .panel-heading
+    = link_to '/messages/search' do
+      %i.fa.fa-caret-left
     %h2 Decrypting message
 
   = form_tag "/message/#{@message.token}", method: :post, autocomplete: 'off', class: 'decrypt-message' do

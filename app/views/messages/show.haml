@@ -7,6 +7,8 @@
 
 .panel.panel-default.message-panel
   .panel-heading
+    = link_to '/' do
+      %i.fa.fa-caret-left
     %h2 Message
   .panel-body
     = hidden :message, :encrypted_body, value: @message.body

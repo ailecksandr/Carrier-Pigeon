@@ -1,4 +1,5 @@
 require 'sinatra/reloader'
+require 'redis'
 
 configure :development do
   set :show_exceptions, true
@@ -18,13 +19,12 @@ configure :production do
   )
 
   uri = URI.parse ENV['REDISTOGO_URL']
-  REDIS = Redis.new(host: uri.host, port: uri.port, password: uri.password)
 
   Sidekiq.configure_server do |config|
-    config.redis = REDIS
+    config.redis = { host: uri.host, port: uri.port, password: uri.password }
   end
 
   Sidekiq.configure_client do |config|
-    config.redis = REDIS
+    config.redis = { host: uri.host, port: uri.port, password: uri.password }
   end
 end

@@ -7,6 +7,8 @@
 
 .panel.panel-default.form-panel
   .panel-heading
+    = link_to '/' do
+      %i.fa.fa-caret-left
     %h2 Creating encrypted message
 
   = form_tag '/messages/encrypt', method: :post, autocomplete: 'off', class: 'new-message' do
@@ -31,4 +33,3 @@
 
     .panel-footer.actions
       = submit 'Send', class: 'btn btn-info right button'
-

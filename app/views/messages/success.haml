@@ -3,6 +3,8 @@
 
 .panel.panel-default.token-panel
   .panel-heading
+    = link_to '/' do
+      %i.fa.fa-caret-left
     %h2 Token of your message
   .panel-body
     = input :message, :token, value: @message.token, class: 'form-control', readonly: true

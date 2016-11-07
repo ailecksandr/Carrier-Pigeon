@@ -30,7 +30,9 @@ describe ApplicationHelper do
 
   describe '#flash_class' do
     it { expect(flash_class :error).to eq 'alert alert-danger' }
+    it { expect(flash_class :success).to eq 'alert alert-success' }
     it { expect(flash_class :notice).to eq 'alert alert-info' }
+    it { expect(flash_class :alert).to eq 'alert alert-warning' }
   end
 
   describe '#errors_list' do

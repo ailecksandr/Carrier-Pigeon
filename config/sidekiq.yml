@@ -1,4 +1,4 @@
-:concurrency: 10
+:concurrency: 7
 :queues:
   - message_destroying
   - default

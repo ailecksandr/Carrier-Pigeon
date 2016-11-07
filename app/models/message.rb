@@ -44,6 +44,6 @@ class Message < ActiveRecord::Base
   end
 
   def set_destroy_time!
-    MessageDestroyWorker.perform_in(self.destroy_value.seconds, self.id) if self.expiring?
+    MessageDestroyWorker.perform_in(self.destroy_value.hours, self.id) if self.expiring?
   end
 end

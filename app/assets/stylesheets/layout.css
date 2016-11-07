@@ -214,3 +214,22 @@ input:focus {
 .message-panel .panel-footer {
     text-align: right;
 }
+
+.alert p {
+  margin: 0 !important;
+}
+
+.panel-heading * {
+    display: inline-block;
+}
+
+.panel-heading i {
+    color: #999;
+    font-size: 2em;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.panel-heading i:hover {
+    color: #656;
+}

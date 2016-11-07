@@ -45,6 +45,6 @@ module ApplicationHelper
   end
 
   def humanize_date(date)
-    date.strftime("%d %B at %H:%M")
+    date.in_time_zone('Europe/Kiev').strftime("%d %B at %H:%M")
   end
 end
